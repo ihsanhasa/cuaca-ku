@@ -3,6 +3,8 @@ import './App.css';
 import { useGeolocated } from "react-geolocated";
 import Cuaca from "./Cuaca"
 import Lokasi from "./Lokasi"
+import Example from './Nav';
+// import Isi from './Isi';
 
 const Demo = () => {
   const { coords, isGeolocationAvailable, isGeolocationEnabled } =
@@ -58,8 +60,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <Example />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* <Demo></Demo> */}
         {
           !isGeolocationAvailable ? (
@@ -70,12 +73,12 @@ function App() {
           (
             <Cuaca lat={coords.latitude} long={coords.longitude} />
           ) : (
-            <div>Getting the location data&hellip; </div>
+            <div className='font-bold'>Getting the location data&hellip; </div>
           )
         }
         <Lokasi />
 
-      </header>
+      {/* </header> */}
     </div>
   );
 }
