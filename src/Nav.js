@@ -8,2609 +8,2614 @@ import { Combobox } from '@headlessui/react'
 import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
 
 const navigation = [
-  { name: 'Hari ini', href: '#', current: true },
-  { name: 'Forecast', href: '#', current: false },
+  { name: 'Hari ini' },
+  { name: 'Forecast' },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const people = [
+const kabkota = [
   {
-      "kabko": "KAB. ACEH BARAT",
+      "kabko": "Kab. ACEH BARAT",
       "lat": 4.4543,
       "long": 96.1527
   },
   {
-      "kabko": "KAB. ACEH BARAT DAYA",
+      "kabko": "Kab. ACEH BARAT DAYA",
       "lat": 3.7963,
       "long": 97.0068
   },
   {
-      "kabko": "KAB. ACEH BESAR",
+      "kabko": "Kab. ACEH BESAR",
       "lat": 5.4529,
       "long": 95.4778
   },
   {
-      "kabko": "KAB. ACEH JAYA",
+      "kabko": "Kab. ACEH JAYA",
       "lat": 4.7874,
       "long": 95.6458
   },
   {
-      "kabko": "KAB. ACEH SELATAN",
+      "kabko": "Kab. ACEH SELATAN",
       "lat": 3.3115,
       "long": 97.3517
   },
   {
-      "kabko": "KAB. ACEH SINGKIL",
+      "kabko": "Kab. ACEH SINGKIL",
       "lat": 2.3589,
       "long": 97.8722
   },
   {
-      "kabko": "KAB. ACEH TAMIANG",
+      "kabko": "Kab. ACEH TAMIANG",
       "lat": 4.2329,
       "long": 98.0029
   },
   {
-      "kabko": "KAB. ACEH TENGAH",
+      "kabko": "Kab. ACEH TENGAH",
       "lat": 4.4483,
       "long": 96.8351
   },
   {
-      "kabko": "KAB. ACEH TENGGARA",
+      "kabko": "Kab. ACEH TENGGARA",
       "lat": 3.3089,
       "long": 97.6982
   },
   {
-      "kabko": "KAB. ACEH TIMUR",
+      "kabko": "Kab. ACEH TIMUR",
       "lat": 4.5224,
       "long": 97.6114
   },
   {
-      "kabko": "KAB. ACEH UTARA",
+      "kabko": "Kab. ACEH UTARA",
       "lat": 4.9786,
       "long": 97.2221
   },
   {
-      "kabko": "KAB. BENER MERIAH",
+      "kabko": "Kab. BENER MERIAH",
       "lat": 4.7514,
       "long": 96.9525
   },
   {
-      "kabko": "KAB. BIREUEN",
+      "kabko": "Kab. BIREUEN",
       "lat": 5.1086,
       "long": 96.6638
   },
   {
-      "kabko": "KAB. GAYO LUES",
+      "kabko": "Kab. GAYO LUES",
       "lat": 3.9552,
       "long": 97.3517
   },
   {
-      "kabko": "KAB. NAGAN RAYA",
+      "kabko": "Kab. NAGAN RAYA",
       "lat": 4.1248,
       "long": 96.493
   },
   {
-      "kabko": "KAB. PIDIE",
+      "kabko": "Kab. PIDIE",
       "lat": 5.0743,
       "long": 95.941
   },
   {
-      "kabko": "KAB. PIDIE JAYA",
+      "kabko": "Kab. PIDIE JAYA",
       "lat": 5.1548,
       "long": 96.1951
   },
   {
-      "kabko": "KAB. SIMEULUE",
+      "kabko": "Kab. SIMEULUE",
       "lat": 2.644,
       "long": 96.0256
   },
   {
-      "kabko": "KOTA BANDA ACEH",
+      "kabko": "Kota BANDA ACEH",
       "lat": 5.5483,
       "long": 95.3238
   },
   {
-      "kabko": "KOTA LANGSA",
+      "kabko": "Kota LANGSA",
       "lat": 4.4725,
       "long": 97.9756
   },
   {
-      "kabko": "KOTA LHOKSEUMAWE",
+      "kabko": "Kota LHOKSEUMAWE",
       "lat": 5.1812,
       "long": 97.1413
   },
   {
-      "kabko": "KOTA SABANG",
+      "kabko": "Kota SABANG",
       "lat": 5.8926,
       "long": 95.3238
   },
   {
-      "kabko": "KOTA SUBULUSSALAM",
+      "kabko": "Kota SUBULUSSALAM",
       "lat": 2.7121,
       "long": 97.9157
   },
   {
-      "kabko": "KAB. ASAHAN",
+      "kabko": "Kab. ASAHAN",
       "lat": 2.8175,
       "long": 99.6341
   },
   {
-      "kabko": "KAB. BATUBARA",
+      "kabko": "Kab. BATUBARA",
       "lat": 3.1741,
       "long": 99.5006
   },
   {
-      "kabko": "KAB. DAIRI",
+      "kabko": "Kab. DAIRI",
       "lat": 2.8676,
       "long": 98.2651
   },
   {
-      "kabko": "KAB. DELI SERDANG",
+      "kabko": "Kab. DELI SERDANG",
       "lat": 3.4202,
       "long": 98.7041
   },
   {
-      "kabko": "KAB. HUMBANG HASUNDUTAN",
+      "kabko": "Kab. HUMBANG HASUNDUTAN",
       "lat": 2.1989,
       "long": 98.5721
   },
   {
-      "kabko": "KAB. KARO",
+      "kabko": "Kab. KARO",
       "lat": 3.1053,
       "long": 98.2651
   },
   {
-      "kabko": "KAB. LABUHANBATU",
+      "kabko": "Kab. LABUHANBATU",
       "lat": 2.344,
       "long": 100.1703
   },
   {
-      "kabko": "KAB. LABUHANBATU SELATAN",
+      "kabko": "Kab. LABUHANBATU SELATAN",
       "lat": 1.8799,
       "long": 100.1703
   },
   {
-      "kabko": "KAB. LABUHANBATU UTARA",
+      "kabko": "Kab. LABUHANBATU UTARA",
       "lat": 2.3466,
       "long": 99.8125
   },
   {
-      "kabko": "KAB. LANGKAT",
+      "kabko": "Kab. LANGKAT",
       "lat": 3.8654,
       "long": 98.3088
   },
   {
-      "kabko": "KAB. MANDAILING NATAL",
+      "kabko": "Kab. MANDAILING NATAL",
       "lat": 0.7432,
       "long": 99.3673
   },
   {
-      "kabko": "KAB. NIAS",
+      "kabko": "Kab. NIAS",
       "lat": 1.0869,
       "long": 97.7417
   },
   {
-      "kabko": "KAB. NIAS BARAT",
+      "kabko": "Kab. NIAS BARAT",
       "lat": 1.0116,
       "long": 97.4814
   },
   {
-      "kabko": "KAB. NIAS SELATAN",
+      "kabko": "Kab. NIAS SELATAN",
       "lat": 0.7086,
       "long": 97.8286
   },
   {
-      "kabko": "KAB. NIAS UTARA",
+      "kabko": "Kab. NIAS UTARA",
       "lat": 1.3166,
       "long": 97.3949
   },
   {
-      "kabko": "KAB. PADANG LAWAS",
+      "kabko": "Kab. PADANG LAWAS",
       "lat": 1.1187,
       "long": 99.8125
   },
   {
-      "kabko": "KAB. PADANG LAWAS UTARA",
+      "kabko": "Kab. PADANG LAWAS UTARA",
       "lat": 1.5759,
       "long": 99.6341
   },
   {
-      "kabko": "KAB. PAKPAK BHARAT",
+      "kabko": "Kab. PAKPAK BHARAT",
       "lat": 2.5135,
       "long": 98.2213
   },
   {
-      "kabko": "KAB. SAMOSIR",
+      "kabko": "Kab. SAMOSIR",
       "lat": 2.6274,
       "long": 98.7922
   },
   {
-      "kabko": "KAB. SERDANG BEDAGAI",
+      "kabko": "Kab. SERDANG BEDAGAI",
       "lat": 3.3372,
       "long": 99.0571
   },
   {
-      "kabko": "KAB. SIMALUNGUN",
+      "kabko": "Kab. SIMALUNGUN",
       "lat": 2.9782,
       "long": 99.2786
   },
   {
-      "kabko": "KAB. TAPANULI SELATAN",
+      "kabko": "Kab. TAPANULI SELATAN",
       "lat": 1.5775,
       "long": 99.2786
   },
   {
-      "kabko": "KAB. TAPANULI TENGAH",
+      "kabko": "Kab. TAPANULI TENGAH",
       "lat": 1.8493,
       "long": 98.7041
   },
   {
-      "kabko": "KAB. TAPANULI UTARA",
+      "kabko": "Kab. TAPANULI UTARA",
       "lat": 2.0405,
       "long": 99.1013
   },
   {
-      "kabko": "KAB. TOBA SAMOSIR",
+      "kabko": "Kab. TOBA SAMOSIR",
       "lat": 2.3502,
       "long": 99.2786
   },
   {
-      "kabko": "KOTA BINJAI",
+      "kabko": "Kota BINJAI",
       "lat": 3.6135,
       "long": 98.5025
   },
   {
-      "kabko": "KOTA GUNUNGSITOLI",
+      "kabko": "Kota GUNUNGSITOLI",
       "lat": 1.2805,
       "long": 97.6147
   },
   {
-      "kabko": "KOTA MEDAN",
+      "kabko": "Kota MEDAN",
       "lat": 3.5952,
       "long": 98.6722
   },
   {
-      "kabko": "KOTA PADANGSIDEMPUAN",
+      "kabko": "Kota PADANGSIDEMPUAN",
       "lat": 1.3722,
       "long": 99.273
   },
   {
-      "kabko": "KOTA PEMATANGSIANTAR",
+      "kabko": "Kota PEMATANGSIANTAR",
       "lat": 2.97,
       "long": 99.0682
   },
   {
-      "kabko": "KOTA SIBOLGA",
+      "kabko": "Kota SIBOLGA",
       "lat": 1.7368,
       "long": 98.7851
   },
   {
-      "kabko": "KOTA TANJUNGBALAI",
+      "kabko": "Kota TANJUNGBALAI",
       "lat": 2.9662,
       "long": 99.7985
   },
   {
-      "kabko": "KOTA TEBING TINGGI",
+      "kabko": "Kota TEBING TINGGI",
       "lat": 3.3263,
       "long": 99.1567
   },
   {
-      "kabko": "KAB. AGAM",
+      "kabko": "Kab. AGAM",
       "lat": -0.2209,
       "long": 100.1703
   },
   {
-      "kabko": "KAB. DHARMASRAYA",
+      "kabko": "Kab. DHARMASRAYA",
       "lat": -1.1121,
       "long": 101.6158
   },
   {
-      "kabko": "KAB. KEPULAUAN MENTAWAI",
+      "kabko": "Kab. KEPULAUAN MENTAWAI",
       "lat": -1.426,
       "long": 98.9245
   },
   {
-      "kabko": "KAB. LIMA PULUH KOTA",
+      "kabko": "Kab. LIMA PULUH Kota",
       "lat": 0.0734,
       "long": 100.5296
   },
   {
-      "kabko": "KAB. PADANG PARIAMAN",
+      "kabko": "Kab. PADANG PARIAMAN",
       "lat": -0.5547,
       "long": 100.2152
   },
   {
-      "kabko": "KAB. PASAMAN",
+      "kabko": "Kab. PASAMAN",
       "lat": 0.2209,
       "long": 100.1703
   },
   {
-      "kabko": "KAB. PASAMAN BARAT",
+      "kabko": "Kab. PASAMAN BARAT",
       "lat": 0.2213,
       "long": 99.6341
   },
   {
-      "kabko": "KAB. PESISIR SELATAN",
+      "kabko": "Kab. PESISIR SELATAN",
       "lat": -1.7223,
       "long": 100.8903
   },
   {
-      "kabko": "KAB. SIJUNJUNG",
+      "kabko": "Kab. SIJUNJUNG",
       "lat": -0.6647,
       "long": 101.0712
   },
   {
-      "kabko": "KAB. SOLOK",
+      "kabko": "Kab. SOLOK",
       "lat": -0.9644,
       "long": 100.8903
   },
   {
-      "kabko": "KAB. SOLOK SELATAN",
+      "kabko": "Kab. SOLOK SELATAN",
       "lat": -1.4157,
       "long": 101.2524
   },
   {
-      "kabko": "KAB. TANAH DATAR",
+      "kabko": "Kab. TANAH DATAR",
       "lat": -0.4797,
       "long": 100.5746
   },
   {
-      "kabko": "KOTA BUKITTINGGI",
+      "kabko": "Kota BUKITTINGGI",
       "lat": -0.3039,
       "long": 100.3835
   },
   {
-      "kabko": "KOTA PADANG",
+      "kabko": "Kota PADANG",
       "lat": -0.9471,
       "long": 100.4172
   },
   {
-      "kabko": "KOTA PADANGPANJANG",
+      "kabko": "Kota PADANGPANJANG",
       "lat": -0.4661,
       "long": 100.3984
   },
   {
-      "kabko": "KOTA PARIAMAN",
+      "kabko": "Kota PARIAMAN",
       "lat": -0.6257,
       "long": 100.1233
   },
   {
-      "kabko": "KOTA PAYAKUMBUH",
+      "kabko": "Kota PAYAKUMBUH",
       "lat": -0.2298,
       "long": 100.6309
   },
   {
-      "kabko": "KOTA SAWAHLUNTO",
+      "kabko": "Kota SAWAHLUNTO",
       "lat": -0.6841,
       "long": 100.7323
   },
   {
-      "kabko": "KOTA SOLOK",
+      "kabko": "Kota SOLOK",
       "lat": -0.7885,
       "long": 100.655
   },
   {
-      "kabko": "KAB. BENGKALIS",
+      "kabko": "Kab. BENGKALIS",
       "lat": 1.4139,
       "long": 101.6158
   },
   {
-      "kabko": "KAB. INDRAGIRI HILIR",
+      "kabko": "Kab. INDRAGIRI HILIR",
       "lat": -0.1457,
       "long": 102.9896
   },
   {
-      "kabko": "KAB. INDRAGIRI HULU",
+      "kabko": "Kab. INDRAGIRI HULU",
       "lat": -0.7361,
       "long": 102.2548
   },
   {
-      "kabko": "KAB. KAMPAR",
+      "kabko": "Kab. KAMPAR",
       "lat": 0.1467,
       "long": 101.1617
   },
   {
-      "kabko": "KAB. KEPULAUAN MERANTI",
+      "kabko": "Kab. KEPULAUAN MERANTI",
       "lat": 0.9209,
       "long": 102.6676
   },
   {
-      "kabko": "KAB. KUANTAN SINGINGI",
+      "kabko": "Kab. KUANTAN SINGINGI",
       "lat": -0.4412,
       "long": 101.5248
   },
   {
-      "kabko": "KAB. PELALAWAN",
+      "kabko": "Kab. PELALAWAN",
       "lat": 0.1461,
       "long": 102.2548
   },
   {
-      "kabko": "KAB. ROKAN HILIR",
+      "kabko": "Kab. ROKAN HILIR",
       "lat": 1.6464,
       "long": 100.8
   },
   {
-      "kabko": "KAB. ROKAN HULU",
+      "kabko": "Kab. ROKAN HULU",
       "lat": 1.0411,
       "long": 100.4397
   },
   {
-      "kabko": "KAB. SIAK",
+      "kabko": "Kab. SIAK",
       "lat": 0.8119,
       "long": 101.798
   },
   {
-      "kabko": "KOTA DUMAI",
+      "kabko": "Kota DUMAI",
       "lat": 1.6666,
       "long": 101.4002
   },
   {
-      "kabko": "KOTA PEKANBARU",
+      "kabko": "Kota PEKANBARU",
       "lat": 0.5071,
       "long": 101.4478
   },
   {
-      "kabko": "KAB. BINTAN",
+      "kabko": "Kab. BINTAN",
       "lat": 1.0619,
       "long": 104.5189
   },
   {
-      "kabko": "KAB. KARIMUN",
+      "kabko": "Kab. KARIMUN",
       "lat": 0.7698,
       "long": 103.4049
   },
   {
-      "kabko": "KAB. KEPULAUAN ANAMBAS",
+      "kabko": "Kab. KEPULAUAN ANAMBAS",
       "lat": 3.1055,
       "long": 105.6537
   },
   {
-      "kabko": "KAB. LINGGA",
+      "kabko": "Kab. LINGGA",
       "lat": -0.4726,
       "long": 104.4258
   },
   {
-      "kabko": "KAB. NATUNA",
+      "kabko": "Kab. NATUNA",
       "lat": 4,
       "long": 108.25
   },
   {
-      "kabko": "KOTA BATAM",
+      "kabko": "Kota BATAM",
       "lat": 1.1301,
       "long": 104.0529
   },
   {
-      "kabko": "KOTA TANJUNG PINANG",
+      "kabko": "Kota TANJUNG PINANG",
       "lat": 0.9186,
       "long": 104.4665
   },
   {
-      "kabko": "PULAU TAMBELAN KAB. BINTAN",
+      "kabko": "PULAU TAMBELAN Kab. BINTAN",
       "lat": 1.1216,
       "long": 107.3259
   },
   {
-      "kabko": "PEKAJANG KAB. LINGGA",
+      "kabko": "PEKAJANG Kab. LINGGA",
       "lat": -0.0752,
       "long": 104.6305
   },
   {
-      "kabko": "PULAU SERASAN KAB. NATUNA",
+      "kabko": "PULAU SERASAN Kab. NATUNA",
       "lat": 2.5179,
       "long": 109.0513
   },
   {
-      "kabko": "PULAU MIDAI KAB. NATUNA",
+      "kabko": "PULAU MIDAI Kab. NATUNA",
       "lat": 2.9979,
       "long": 107.7755
   },
   {
-      "kabko": "PULAU LAUT KAB. NATUNA",
+      "kabko": "PULAU LAUT Kab. NATUNA",
       "lat": 4.7103,
       "long": 107.971
   },
   {
-      "kabko": "KAB. BATANGHARI",
+      "kabko": "Kab. BATANGHARI",
       "lat": -1.7084,
       "long": 103.0818
   },
   {
-      "kabko": "KAB. BUNGO",
+      "kabko": "Kab. BUNGO",
       "lat": -1.6401,
       "long": 101.8892
   },
   {
-      "kabko": "KAB. KERINCI",
+      "kabko": "Kab. KERINCI",
       "lat": -1.872,
       "long": 101.4339
   },
   {
-      "kabko": "KAB. MERANGIN",
+      "kabko": "Kab. MERANGIN",
       "lat": -2.1753,
       "long": 101.9805
   },
   {
-      "kabko": "KAB. MUARO JAMBI",
+      "kabko": "Kab. MUARO JAMBI",
       "lat": -1.5521,
       "long": 103.8216
   },
   {
-      "kabko": "KAB. SAROLANGUN",
+      "kabko": "Kab. SAROLANGUN",
       "lat": -2.323,
       "long": 102.7135
   },
   {
-      "kabko": "KAB. TANJUNG JABUNG BARAT",
+      "kabko": "Kab. TANJUNG JABUNG BARAT",
       "lat": -1.1058,
       "long": 103.0818
   },
   {
-      "kabko": "KAB. TANJUNG JABUNG TIMUR",
+      "kabko": "Kab. TANJUNG JABUNG TIMUR",
       "lat": -1.1024,
       "long": 103.8216
   },
   {
-      "kabko": "KAB. TEBO",
+      "kabko": "Kab. TEBO",
       "lat": -1.2593,
       "long": 102.3464
   },
   {
-      "kabko": "KOTA JAMBI",
+      "kabko": "Kota JAMBI",
       "lat": -1.6101,
       "long": 103.6131
   },
   {
-      "kabko": "KOTA SUNGAI PENUH",
+      "kabko": "Kota SUNGAI PENUH",
       "lat": -2.0634,
       "long": 101.3947
   },
   {
-      "kabko": "KAB. BENGKULU SELATAN",
+      "kabko": "Kab. BENGKULU SELATAN",
       "lat": -4.3248,
       "long": 103.0357
   },
   {
-      "kabko": "KAB. BENGKULU TENGAH",
+      "kabko": "Kab. BENGKULU TENGAH",
       "lat": -3.6962,
       "long": 102.3922
   },
   {
-      "kabko": "KAB. BENGKULU UTARA",
+      "kabko": "Kab. BENGKULU UTARA",
       "lat": -3.2663,
       "long": 101.9805
   },
   {
-      "kabko": "KAB. KAUR",
+      "kabko": "Kab. KAUR",
       "lat": -4.5216,
       "long": 103.2663
   },
   {
-      "kabko": "KAB. KEPAHIANG",
+      "kabko": "Kab. KEPAHIANG",
       "lat": -3.613,
       "long": 102.6676
   },
   {
-      "kabko": "KAB. LEBONG",
+      "kabko": "Kab. LEBONG",
       "lat": -3.1455,
       "long": 102.209
   },
   {
-      "kabko": "KAB. MUKOMUKO",
+      "kabko": "Kab. MUKOMUKO",
       "lat": -2.6449,
       "long": 101.4339
   },
   {
-      "kabko": "KAB. REJANG LEBONG",
+      "kabko": "Kab. REJANG LEBONG",
       "lat": -3.4548,
       "long": 102.6676
   },
   {
-      "kabko": "KAB. SELUMA",
+      "kabko": "Kab. SELUMA",
       "lat": -4.0499,
       "long": 102.7135
   },
   {
-      "kabko": "KOTA BENGKULU",
+      "kabko": "Kota BENGKULU",
       "lat": -3.7928,
       "long": 102.2608
   },
   {
-      "kabko": "KAB. BANYUASIN",
+      "kabko": "Kab. BANYUASIN",
       "lat": -2.6096,
       "long": 104.7521
   },
   {
-      "kabko": "KAB. EMPAT LAWANG",
+      "kabko": "Kab. EMPAT LAWANG",
       "lat": -3.7286,
       "long": 102.8975
   },
   {
-      "kabko": "KAB. LAHAT",
+      "kabko": "Kab. LAHAT",
       "lat": -3.8009,
       "long": 103.3587
   },
   {
-      "kabko": "KAB. MUARA ENIM",
+      "kabko": "Kab. MUARA ENIM",
       "lat": -3.7114,
       "long": 104.0072
   },
   {
-      "kabko": "KAB. MUSI BANYUASIN",
+      "kabko": "Kab. MUSI BANYUASIN",
       "lat": -2.5442,
       "long": 103.7289
   },
   {
-      "kabko": "KAB. MUSI RAWAS",
+      "kabko": "Kab. MUSI RAWAS",
       "lat": -3.0957,
       "long": 103.0818
   },
   {
-      "kabko": "KAB. MUSI RAWAS UTARA",
+      "kabko": "Kab. MUSI RAWAS UTARA",
       "lat": -2.7878,
       "long": 102.7135
   },
   {
-      "kabko": "KAB. OGAN ILIR",
+      "kabko": "Kab. OGAN ILIR",
       "lat": -3.4265,
       "long": 104.6121
   },
   {
-      "kabko": "KAB. OGAN KOMERING ILIR",
+      "kabko": "Kab. OGAN KOMERING ILIR",
       "lat": -3.456,
       "long": 105.2195
   },
   {
-      "kabko": "KAB. OGAN KOMERING ULU",
+      "kabko": "Kab. OGAN KOMERING ULU",
       "lat": -4.0283,
       "long": 104.0072
   },
   {
-      "kabko": "KAB. OGAN KOMERING ULU SELATAN",
+      "kabko": "Kab. OGAN KOMERING ULU SELATAN",
       "lat": -4.6682,
       "long": 104.0072
   },
   {
-      "kabko": "KAB. OGAN KOMERING ULU TIMUR",
+      "kabko": "Kab. OGAN KOMERING ULU TIMUR",
       "lat": -3.8568,
       "long": 104.7521
   },
   {
-      "kabko": "KAB. PENUKAL ABAB LEMATANG ILIR",
+      "kabko": "Kab. PENUKAL ABAB LEMATANG ILIR",
       "lat": -3.2398,
       "long": 104.0072
   },
   {
-      "kabko": "KOTA LUBUKLINGGAU",
+      "kabko": "Kota LUBUKLINGGAU",
       "lat": -3.2996,
       "long": 102.8572
   },
   {
-      "kabko": "KOTA PAGAR ALAM",
+      "kabko": "Kota PAGAR ALAM",
       "lat": -4.042,
       "long": 103.2279
   },
   {
-      "kabko": "KOTA PALEMBANG",
+      "kabko": "Kota PALEMBANG",
       "lat": -2.9761,
       "long": 104.7754
   },
   {
-      "kabko": "KOTA PRABUMULIH",
+      "kabko": "Kota PRABUMULIH",
       "lat": -3.4214,
       "long": 104.2437
   },
   {
-      "kabko": "KAB. BANGKA",
+      "kabko": "Kab. BANGKA",
       "lat": -1.8743,
       "long": 105.923
   },
   {
-      "kabko": "KAB. BANGKA BARAT",
+      "kabko": "Kab. BANGKA BARAT",
       "lat": -1.8405,
       "long": 105.5005
   },
   {
-      "kabko": "KAB. BANGKA SELATAN",
+      "kabko": "Kab. BANGKA SELATAN",
       "lat": -2.7411,
       "long": 106.4406
   },
   {
-      "kabko": "KAB. BANGKA TENGAH",
+      "kabko": "Kab. BANGKA TENGAH",
       "lat": -2.4008,
       "long": 106.2051
   },
   {
-      "kabko": "KAB. BELITUNG",
+      "kabko": "Kab. BELITUNG",
       "lat": -2.7217,
       "long": 107.7636
   },
   {
-      "kabko": "KAB. BELITUNG TIMUR",
+      "kabko": "Kab. BELITUNG TIMUR",
       "lat": -2.8678,
       "long": 108.1429
   },
   {
-      "kabko": "KOTA PANGKAL PINANG",
+      "kabko": "Kota PANGKAL PINANG",
       "lat": -2.1316,
       "long": 106.1169
   },
   {
-      "kabko": "KAB. LAMPUNG TENGAH",
+      "kabko": "Kab. LAMPUNG TENGAH",
       "lat": -4.8008,
       "long": 105.3131
   },
   {
-      "kabko": "KAB. LAMPUNG UTARA",
+      "kabko": "Kab. LAMPUNG UTARA",
       "lat": -4.8134,
       "long": 104.7521
   },
   {
-      "kabko": "KAB. LAMPUNG SELATAN",
+      "kabko": "Kab. LAMPUNG SELATAN",
       "lat": -5.5623,
       "long": 105.5474
   },
   {
-      "kabko": "KAB. LAMPUNG BARAT",
+      "kabko": "Kab. LAMPUNG BARAT",
       "lat": -5.1095,
       "long": 104.1466
   },
   {
-      "kabko": "KAB. LAMPUNG TIMUR",
+      "kabko": "Kab. LAMPUNG TIMUR",
       "lat": -5.1135,
       "long": 105.6882
   },
   {
-      "kabko": "KAB. MESUJI",
+      "kabko": "Kab. MESUJI",
       "lat": -4.0045,
       "long": 105.3131
   },
   {
-      "kabko": "KAB. PESAWARAN",
+      "kabko": "Kab. PESAWARAN",
       "lat": -5.4932,
       "long": 105.0791
   },
   {
-      "kabko": "KAB. PESISIR BARAT",
+      "kabko": "Kab. PESISIR BARAT",
       "lat": -5.2928,
       "long": 104.1234
   },
   {
-      "kabko": "KAB. PRINGSEWU",
+      "kabko": "Kab. PRINGSEWU",
       "lat": -5.3331,
       "long": 104.9856
   },
   {
-      "kabko": "KAB. TULANG BAWANG",
+      "kabko": "Kab. TULANG BAWANG",
       "lat": -4.3177,
       "long": 105.5005
   },
   {
-      "kabko": "KAB. TULANG BAWANG BARAT",
+      "kabko": "Kab. TULANG BAWANG BARAT",
       "lat": -4.5257,
       "long": 105.0791
   },
   {
-      "kabko": "KAB. TANGGAMUS",
+      "kabko": "Kab. TANGGAMUS",
       "lat": -5.3027,
       "long": 104.5655
   },
   {
-      "kabko": "KAB. WAY KANAN",
+      "kabko": "Kab. WAY KANAN",
       "lat": -4.4964,
       "long": 104.5655
   },
   {
-      "kabko": "KOTA BANDAR LAMPUNG",
+      "kabko": "Kota BANDAR LAMPUNG",
       "lat": -5.3971,
       "long": 105.2668
   },
   {
-      "kabko": "KOTA METRO",
+      "kabko": "Kota METRO",
       "lat": -5.1178,
       "long": 105.3073
   },
   {
-      "kabko": "KAB. LEBAK",
+      "kabko": "Kab. LEBAK",
       "lat": -6.5644,
       "long": 106.2522
   },
   {
-      "kabko": "KAB. PANDEGLANG",
+      "kabko": "Kab. PANDEGLANG",
       "lat": -6.7483,
       "long": 105.6882
   },
   {
-      "kabko": "KAB. SERANG",
+      "kabko": "Kab. SERANG",
       "lat": -6.1397,
       "long": 106.0405
   },
   {
-      "kabko": "KAB. TANGERANG",
+      "kabko": "Kab. TANGERANG",
       "lat": -6.1872,
       "long": 106.4877
   },
   {
-      "kabko": "KOTA CILEGON",
+      "kabko": "Kota CILEGON",
       "lat": -6.0025,
       "long": 106.0111
   },
   {
-      "kabko": "KOTA SERANG",
+      "kabko": "Kota SERANG",
       "lat": -6.1104,
       "long": 106.164
   },
   {
-      "kabko": "KOTA TANGERANG",
+      "kabko": "Kota TANGERANG",
       "lat": -6.2024,
       "long": 106.6527
   },
   {
-      "kabko": "KOTA TANGERANG SELATAN",
+      "kabko": "Kota TANGERANG SELATAN",
       "lat": -6.2835,
       "long": 106.7113
   },
   {
-      "kabko": "KAB. BANDUNG",
+      "kabko": "Kab. BANDUNG",
       "lat": -7.1341,
       "long": 107.6215
   },
   {
-      "kabko": "KAB. BANDUNG BARAT",
+      "kabko": "Kab. BANDUNG BARAT",
       "lat": -6.8652,
       "long": 107.492
   },
   {
-      "kabko": "KAB. BEKASI",
+      "kabko": "Kab. BEKASI",
       "lat": -6.2474,
       "long": 107.1485
   },
   {
-      "kabko": "KAB. BOGOR",
+      "kabko": "Kab. BOGOR",
       "lat": -6.5518,
       "long": 106.6291
   },
   {
-      "kabko": "KAB. CIAMIS",
+      "kabko": "Kab. CIAMIS",
       "lat": -7.3321,
       "long": 108.3493
   },
   {
-      "kabko": "KAB. CIANJUR",
+      "kabko": "Kab. CIANJUR",
       "lat": -7.358,
       "long": 107.1957
   },
   {
-      "kabko": "KAB. CIREBON",
+      "kabko": "Kab. CIREBON",
       "lat": -6.6899,
       "long": 108.4751
   },
   {
-      "kabko": "KAB. GARUT",
+      "kabko": "Kab. GARUT",
       "lat": -7.5012,
       "long": 107.7636
   },
   {
-      "kabko": "KAB. INDRAMAYU",
+      "kabko": "Kab. INDRAMAYU",
       "lat": -6.3373,
       "long": 108.3258
   },
   {
-      "kabko": "KAB. KARAWANG",
+      "kabko": "Kab. KARAWANG",
       "lat": -6.3227,
       "long": 107.3376
   },
   {
-      "kabko": "KAB. KUNINGAN",
+      "kabko": "Kab. KUNINGAN",
       "lat": -7.0138,
       "long": 108.5701
   },
   {
-      "kabko": "KAB. MAJALENGKA",
+      "kabko": "Kab. MAJALENGKA",
       "lat": -6.7791,
       "long": 108.2852
   },
   {
-      "kabko": "KAB. PANGANDARAN",
+      "kabko": "Kab. PANGANDARAN",
       "lat": -7.6151,
       "long": 108.4988
   },
   {
-      "kabko": "KAB. PURWAKARTA",
+      "kabko": "Kab. PURWAKARTA",
       "lat": -6.5649,
       "long": 107.4322
   },
   {
-      "kabko": "KAB. SUBANG",
+      "kabko": "Kab. SUBANG",
       "lat": -6.3488,
       "long": 107.7636
   },
   {
-      "kabko": "KAB. SUKABUMI",
+      "kabko": "Kab. SUKABUMI",
       "lat": -6.8649,
       "long": 106.9536
   },
   {
-      "kabko": "KAB. SUMEDANG",
+      "kabko": "Kab. SUMEDANG",
       "lat": -6.8329,
       "long": 107.9532
   },
   {
-      "kabko": "KAB. TASIKMALAYA",
+      "kabko": "Kab. TASIKMALAYA",
       "lat": -7.6513,
       "long": 108.1429
   },
   {
-      "kabko": "KOTA BANDUNG",
+      "kabko": "Kota BANDUNG",
       "lat": -6.9175,
       "long": 107.6191
   },
   {
-      "kabko": "KOTA BANJAR",
+      "kabko": "Kota BANJAR",
       "lat": -7.3707,
       "long": 108.5342
   },
   {
-      "kabko": "KOTA BEKASI",
+      "kabko": "Kota BEKASI",
       "lat": -6.2383,
       "long": 106.9756
   },
   {
-      "kabko": "KOTA BOGOR",
+      "kabko": "Kota BOGOR",
       "lat": -6.5971,
       "long": 106.806
   },
   {
-      "kabko": "KOTA CIMAHI",
+      "kabko": "Kota CIMAHI",
       "lat": -6.8841,
       "long": 107.5413
   },
   {
-      "kabko": "KOTA CIREBON",
+      "kabko": "Kota CIREBON",
       "lat": -6.732,
       "long": 108.5523
   },
   {
-      "kabko": "KOTA DEPOK",
+      "kabko": "Kota DEPOK",
       "lat": -6.4025,
       "long": 106.7942
   },
   {
-      "kabko": "KOTA SUKABUMI",
+      "kabko": "Kota SUKABUMI",
       "lat": -6.9277,
       "long": 106.93
   },
   {
-      "kabko": "KOTA TASIKMALAYA",
+      "kabko": "Kota TASIKMALAYA",
       "lat": -7.3506,
       "long": 108.2172
   },
   {
-      "kabko": "KOTA JAKARTA",
+      "kabko": "Kota JAKARTA",
       "lat": -6.1751,
       "long": 106.865
   },
   {
-      "kabko": "KAB. ADMINISTRASI KEPULAUAN SERIBU",
+      "kabko": "Kab. ADMINISTRASI KEPULAUAN SERIBU",
       "lat": -5.6122,
       "long": 106.617
   },
   {
-      "kabko": "KAB. BANJARNEGARA",
+      "kabko": "Kab. BANJARNEGARA",
       "lat": -7.3794,
       "long": 109.6163
   },
   {
-      "kabko": "KAB. BANYUMAS",
+      "kabko": "Kab. BANYUMAS",
       "lat": -7.4832,
       "long": 109.1404
   },
   {
-      "kabko": "KAB. BATANG",
+      "kabko": "Kab. BATANG",
       "lat": -7.0392,
       "long": 109.9021
   },
   {
-      "kabko": "KAB. BLORA",
+      "kabko": "Kab. BLORA",
       "lat": -7.0122,
       "long": 111.3799
   },
   {
-      "kabko": "KAB. BOYOLALI",
+      "kabko": "Kab. BOYOLALI",
       "lat": -7.4318,
       "long": 110.6884
   },
   {
-      "kabko": "KAB. BREBES",
+      "kabko": "Kab. BREBES",
       "lat": -6.9592,
       "long": 108.9027
   },
   {
-      "kabko": "KAB. CILACAP",
+      "kabko": "Kab. CILACAP",
       "lat": -7.6178,
       "long": 108.9027
   },
   {
-      "kabko": "KAB. DEMAK",
+      "kabko": "Kab. DEMAK",
       "lat": -6.9239,
       "long": 110.6646
   },
   {
-      "kabko": "KAB. GROBOGAN",
+      "kabko": "Kab. GROBOGAN",
       "lat": -7.1542,
       "long": 110.9507
   },
   {
-      "kabko": "KAB. JEPARA",
+      "kabko": "Kab. JEPARA",
       "lat": -6.5827,
       "long": 110.6787
   },
   {
-      "kabko": "KAB. KARANGANYAR",
+      "kabko": "Kab. KARANGANYAR",
       "lat": -7.6387,
       "long": 111.046
   },
   {
-      "kabko": "KAB. KEBUMEN",
+      "kabko": "Kab. KEBUMEN",
       "lat": -7.6681,
       "long": 109.6525
   },
   {
-      "kabko": "KAB. KENDAL",
+      "kabko": "Kab. KENDAL",
       "lat": -7.0265,
       "long": 110.1879
   },
   {
-      "kabko": "KAB. KLATEN",
+      "kabko": "Kab. KLATEN",
       "lat": -7.6579,
       "long": 110.6646
   },
   {
-      "kabko": "KAB. KUDUS",
+      "kabko": "Kab. KUDUS",
       "lat": -6.7726,
       "long": 110.8791
   },
   {
-      "kabko": "KAB. MAGELANG",
+      "kabko": "Kab. MAGELANG",
       "lat": -7.4305,
       "long": 110.2832
   },
   {
-      "kabko": "KAB. PATI",
+      "kabko": "Kab. PATI",
       "lat": -6.745,
       "long": 111.046
   },
   {
-      "kabko": "KAB. PEKALONGAN",
+      "kabko": "Kab. PEKALONGAN",
       "lat": -7.0517,
       "long": 109.6163
   },
   {
-      "kabko": "KAB. PEMALANG",
+      "kabko": "Kab. PEMALANG",
       "lat": -7.0599,
       "long": 109.4259
   },
   {
-      "kabko": "KAB. PURBALINGGA",
+      "kabko": "Kab. PURBALINGGA",
       "lat": -7.3059,
       "long": 109.4259
   },
   {
-      "kabko": "KAB. PURWOREJO",
+      "kabko": "Kab. PURWOREJO",
       "lat": -7.6965,
       "long": 109.9989
   },
   {
-      "kabko": "KAB. REMBANG",
+      "kabko": "Kab. REMBANG",
       "lat": -6.8082,
       "long": 111.4276
   },
   {
-      "kabko": "KAB. SEMARANG",
+      "kabko": "Kab. SEMARANG",
       "lat": -7.1765,
       "long": 110.4739
   },
   {
-      "kabko": "KAB. SRAGEN",
+      "kabko": "Kab. SRAGEN",
       "lat": -7.4303,
       "long": 111.0092
   },
   {
-      "kabko": "KAB. SUKOHARJO",
+      "kabko": "Kab. SUKOHARJO",
       "lat": -7.6484,
       "long": 110.8553
   },
   {
-      "kabko": "KAB. TEGAL",
+      "kabko": "Kab. TEGAL",
       "lat": -6.8588,
       "long": 109.1048
   },
   {
-      "kabko": "KAB. TEMANGGUNG",
+      "kabko": "Kab. TEMANGGUNG",
       "lat": -7.2749,
       "long": 110.0892
   },
   {
-      "kabko": "KAB. WONOGIRI",
+      "kabko": "Kab. WONOGIRI",
       "lat": -7.8846,
       "long": 111.046
   },
   {
-      "kabko": "KAB. WONOSOBO",
+      "kabko": "Kab. WONOSOBO",
       "lat": -7.3632,
       "long": 109.9002
   },
   {
-      "kabko": "KOTA MAGELANG",
+      "kabko": "Kota MAGELANG",
       "lat": -7.4797,
       "long": 110.2177
   },
   {
-      "kabko": "KOTA PEKALONGAN",
+      "kabko": "Kota PEKALONGAN",
       "lat": -6.8898,
       "long": 109.6746
   },
   {
-      "kabko": "KOTA SALATIGA",
+      "kabko": "Kota SALATIGA",
       "lat": -7.3305,
       "long": 110.5084
   },
   {
-      "kabko": "KOTA SEMARANG",
+      "kabko": "Kota SEMARANG",
       "lat": -7.0051,
       "long": 110.4381
   },
   {
-      "kabko": "KOTA SURAKARTA",
+      "kabko": "Kota SURAKARTA",
       "lat": -7.5755,
       "long": 110.8243
   },
   {
-      "kabko": "KOTA TEGAL",
+      "kabko": "Kota TEGAL",
       "lat": -6.8797,
       "long": 109.1256
   },
   {
-      "kabko": "KAB. BANTUL",
+      "kabko": "Kab. BANTUL",
       "lat": -7.919,
       "long": 110.3785
   },
   {
-      "kabko": "KAB. GUNUNGKIDUL",
+      "kabko": "Kab. GUNUNGKIDUL",
       "lat": -8.0305,
       "long": 110.6169
   },
   {
-      "kabko": "KAB. KULON PROGO",
+      "kabko": "Kab. KULON PROGO",
       "lat": -7.8267,
       "long": 110.1641
   },
   {
-      "kabko": "KAB. SLEMAN",
+      "kabko": "Kab. SLEMAN",
       "lat": -7.7325,
       "long": 110.4024
   },
   {
-      "kabko": "KOTA YOGYAKARTA",
+      "kabko": "Kota YOGYAKARTA",
       "lat": -7.7956,
       "long": 110.3695
   },
   {
-      "kabko": "KAB. BANGKALAN",
+      "kabko": "Kab. BANGKALAN",
       "lat": -7.0384,
       "long": 112.9137
   },
   {
-      "kabko": "KAB. BANYUWANGI",
+      "kabko": "Kab. BANYUWANGI",
       "lat": -8.2191,
       "long": 114.3691
   },
   {
-      "kabko": "KAB. BLITAR",
+      "kabko": "Kab. BLITAR",
       "lat": -8.0955,
       "long": 112.1609
   },
   {
-      "kabko": "KAB. BOJONEGORO",
+      "kabko": "Kab. BOJONEGORO",
       "lat": -7.3175,
       "long": 111.7615
   },
   {
-      "kabko": "KAB. BONDOWOSO",
+      "kabko": "Kab. BONDOWOSO",
       "lat": -7.9674,
       "long": 113.9061
   },
   {
-      "kabko": "KAB. GRESIK",
+      "kabko": "Kab. GRESIK",
       "lat": -7.155,
       "long": 112.5722
   },
   {
-      "kabko": "KAB. JEMBER",
+      "kabko": "Kab. JEMBER",
       "lat": -8.1845,
       "long": 113.6681
   },
   {
-      "kabko": "KAB. JOMBANG",
+      "kabko": "Kab. JOMBANG",
       "lat": -7.5741,
       "long": 112.2861
   },
   {
-      "kabko": "KAB. KEDIRI",
+      "kabko": "Kab. KEDIRI",
       "lat": -7.8232,
       "long": 112.1907
   },
   {
-      "kabko": "KAB. LAMONGAN",
+      "kabko": "Kab. LAMONGAN",
       "lat": -7.1269,
       "long": 112.3338
   },
   {
-      "kabko": "KAB. LUMAJANG",
+      "kabko": "Kab. LUMAJANG",
       "lat": -8.0944,
       "long": 113.1442
   },
   {
-      "kabko": "KAB. MADIUN",
+      "kabko": "Kab. MADIUN",
       "lat": -7.6093,
       "long": 111.6184
   },
   {
-      "kabko": "KAB. MAGETAN",
+      "kabko": "Kab. MAGETAN",
       "lat": -7.6433,
       "long": 111.356
   },
   {
-      "kabko": "KAB. MALANG",
+      "kabko": "Kab. MALANG",
       "lat": -8.2422,
       "long": 112.7152
   },
   {
-      "kabko": "KAB. MOJOKERTO",
+      "kabko": "Kab. MOJOKERTO",
       "lat": -7.4699,
       "long": 112.4351
   },
   {
-      "kabko": "KAB. NGANJUK",
+      "kabko": "Kab. NGANJUK",
       "lat": -7.5944,
       "long": 111.9046
   },
   {
-      "kabko": "KAB. NGAWI",
+      "kabko": "Kab. NGAWI",
       "lat": -7.461,
       "long": 111.3322
   },
   {
-      "kabko": "KAB. PACITAN",
+      "kabko": "Kab. PACITAN",
       "lat": -8.1263,
       "long": 111.1414
   },
   {
-      "kabko": "KAB. PAMEKASAN",
+      "kabko": "Kab. PAMEKASAN",
       "lat": -7.1051,
       "long": 113.5252
   },
   {
-      "kabko": "KAB. PASURUAN",
+      "kabko": "Kab. PASURUAN",
       "lat": -7.786,
       "long": 112.8582
   },
   {
-      "kabko": "KAB. PONOROGO",
+      "kabko": "Kab. PONOROGO",
       "lat": -7.8651,
       "long": 111.4696
   },
   {
-      "kabko": "KAB. PROBOLINGGO",
+      "kabko": "Kab. PROBOLINGGO",
       "lat": -7.8718,
       "long": 113.4776
   },
   {
-      "kabko": "KAB. SAMPANG",
+      "kabko": "Kab. SAMPANG",
       "lat": -7.0402,
       "long": 113.2394
   },
   {
-      "kabko": "KAB. SIDOARJO",
+      "kabko": "Kab. SIDOARJO",
       "lat": -7.4726,
       "long": 112.6675
   },
   {
-      "kabko": "KAB. SITUBONDO",
+      "kabko": "Kab. SITUBONDO",
       "lat": -7.7889,
       "long": 114.1915
   },
   {
-      "kabko": "KAB. SUMENEP",
+      "kabko": "Kab. SUMENEP",
       "lat": -6.9254,
       "long": 113.9061
   },
   {
-      "kabko": "KAB. TRENGGALEK",
+      "kabko": "Kab. TRENGGALEK",
       "lat": -8.1824,
       "long": 111.6184
   },
   {
-      "kabko": "KAB. TUBAN",
+      "kabko": "Kab. TUBAN",
       "lat": -6.8955,
       "long": 112.0298
   },
   {
-      "kabko": "KAB. TULUNGAGUNG",
+      "kabko": "Kab. TULUNGAGUNG",
       "lat": -8.0912,
       "long": 111.9642
   },
   {
-      "kabko": "KOTA BATU",
+      "kabko": "Kota BATU",
       "lat": -7.8831,
       "long": 112.5334
   },
   {
-      "kabko": "KOTA BLITAR",
+      "kabko": "Kota BLITAR",
       "lat": -8.0955,
       "long": 112.1609
   },
   {
-      "kabko": "KOTA KEDIRI",
+      "kabko": "Kota KEDIRI",
       "lat": -7.848,
       "long": 112.0178
   },
   {
-      "kabko": "KOTA MADIUN",
+      "kabko": "Kota MADIUN",
       "lat": -7.6311,
       "long": 111.53
   },
   {
-      "kabko": "KOTA MALANG",
+      "kabko": "Kota MALANG",
       "lat": -7.9666,
       "long": 112.6326
   },
   {
-      "kabko": "KOTA MOJOKERTO",
+      "kabko": "Kota MOJOKERTO",
       "lat": -7.4705,
       "long": 112.4401
   },
   {
-      "kabko": "KOTA PASURUAN",
+      "kabko": "Kota PASURUAN",
       "lat": -7.6469,
       "long": 112.8999
   },
   {
-      "kabko": "KOTA PROBOLINGGO",
+      "kabko": "Kota PROBOLINGGO",
       "lat": -7.7764,
       "long": 113.2037
   },
   {
-      "kabko": "KOTA SURABAYA",
+      "kabko": "Kota SURABAYA",
       "lat": -7.2575,
       "long": 112.7521
   },
   {
-      "kabko": "KAB. BADUNG",
+      "kabko": "Kab. BADUNG",
       "lat": -8.5819,
       "long": 115.1771
   },
   {
-      "kabko": "KAB. BANGLI",
+      "kabko": "Kab. BANGLI",
       "lat": -8.2976,
       "long": 115.3549
   },
   {
-      "kabko": "KAB. BULELENG",
+      "kabko": "Kab. BULELENG",
       "lat": -8.2239,
       "long": 114.9517
   },
   {
-      "kabko": "KAB. GIANYAR",
+      "kabko": "Kab. GIANYAR",
       "lat": -8.4248,
       "long": 115.2601
   },
   {
-      "kabko": "KAB. JEMBRANA",
+      "kabko": "Kab. JEMBRANA",
       "lat": -8.3233,
       "long": 114.6668
   },
   {
-      "kabko": "KAB. KARANGASEM",
+      "kabko": "Kab. KARANGASEM",
       "lat": -8.3466,
       "long": 115.5207
   },
   {
-      "kabko": "KAB. KLUNGKUNG",
+      "kabko": "Kab. KLUNGKUNG",
       "lat": -8.7278,
       "long": 115.5444
   },
   {
-      "kabko": "KAB. TABANAN",
+      "kabko": "Kab. TABANAN",
       "lat": -8.4596,
       "long": 115.0466
   },
   {
-      "kabko": "KOTA DENPASAR",
+      "kabko": "Kota DENPASAR",
       "lat": -8.6705,
       "long": 115.2126
   },
   {
-      "kabko": "KAB. BIMA",
+      "kabko": "Kab. BIMA",
       "lat": -8.4354,
       "long": 118.6265
   },
   {
-      "kabko": "KAB. DOMPU",
+      "kabko": "Kab. DOMPU",
       "lat": -8.5364,
       "long": 118.3462
   },
   {
-      "kabko": "KAB. LOMBOK BARAT",
+      "kabko": "Kab. LOMBOK BARAT",
       "lat": -8.6465,
       "long": 116.1123
   },
   {
-      "kabko": "KAB. LOMBOK TENGAH",
+      "kabko": "Kab. LOMBOK TENGAH",
       "lat": -8.6946,
       "long": 116.2777
   },
   {
-      "kabko": "KAB. LOMBOK TIMUR",
+      "kabko": "Kab. LOMBOK TIMUR",
       "lat": -8.5134,
       "long": 116.561
   },
   {
-      "kabko": "KAB. LOMBOK UTARA",
+      "kabko": "Kab. LOMBOK UTARA",
       "lat": -8.3739,
       "long": 116.2777
   },
   {
-      "kabko": "KAB. SUMBAWA",
+      "kabko": "Kab. SUMBAWA",
       "lat": -8.6529,
       "long": 117.3616
   },
   {
-      "kabko": "KAB. SUMBAWA BARAT",
+      "kabko": "Kab. SUMBAWA BARAT",
       "lat": -8.9293,
       "long": 116.891
   },
   {
-      "kabko": "KOTA BIMA",
+      "kabko": "Kota BIMA",
       "lat": -8.4643,
       "long": 118.7449
   },
   {
-      "kabko": "KOTA MATARAM",
+      "kabko": "Kota MATARAM",
       "lat": -8.577,
       "long": 116.1005
   },
   {
-      "kabko": "KAB. ALOR",
+      "kabko": "Kab. ALOR",
       "lat": -8.2928,
       "long": 124.5528
   },
   {
-      "kabko": "KAB. BELU",
+      "kabko": "Kab. BELU",
       "lat": -9.1539,
       "long": 124.9066
   },
   {
-      "kabko": "KAB. ENDE",
+      "kabko": "Kab. ENDE",
       "lat": -8.6763,
       "long": 121.7195
   },
   {
-      "kabko": "KAB. FLORES TIMUR",
+      "kabko": "Kab. FLORES TIMUR",
       "lat": -8.3131,
       "long": 122.9663
   },
   {
-      "kabko": "KAB. KUPANG",
+      "kabko": "Kab. KUPANG",
       "lat": -9.9906,
       "long": 123.8858
   },
   {
-      "kabko": "KAB. LEMBATA",
+      "kabko": "Kab. LEMBATA",
       "lat": -8.4719,
       "long": 123.4832
   },
   {
-      "kabko": "KAB. MALAKA",
+      "kabko": "Kab. MALAKA",
       "lat": -9.5309,
       "long": 124.9066
   },
   {
-      "kabko": "KAB. MANGGARAI",
+      "kabko": "Kab. MANGGARAI",
       "lat": -8.6797,
       "long": 120.3897
   },
   {
-      "kabko": "KAB. MANGGARAI BARAT",
+      "kabko": "Kab. MANGGARAI BARAT",
       "lat": -8.6688,
       "long": 120.0665
   },
   {
-      "kabko": "KAB. MANGGARAI TIMUR",
+      "kabko": "Kab. MANGGARAI TIMUR",
       "lat": -8.6207,
       "long": 120.62
   },
   {
-      "kabko": "KAB. NGADA",
+      "kabko": "Kab. NGADA",
       "lat": -8.743,
       "long": 120.9876
   },
   {
-      "kabko": "KAB. NAGEKEO",
+      "kabko": "Kab. NAGEKEO",
       "lat": -8.6754,
       "long": 121.3084
   },
   {
-      "kabko": "KAB. ROTE NDAO",
+      "kabko": "Kab. ROTE NDAO",
       "lat": -10.7386,
       "long": 123.1239
   },
   {
-      "kabko": "KAB. SABU RAIJUA",
+      "kabko": "Kab. SABU RAIJUA",
       "lat": -10.5541,
       "long": 121.8335
   },
   {
-      "kabko": "KAB. SIKKA",
+      "kabko": "Kab. SIKKA",
       "lat": -8.6766,
       "long": 122.1292
   },
   {
-      "kabko": "KAB. SUMBA BARAT",
+      "kabko": "Kab. SUMBA BARAT",
       "lat": -9.6548,
       "long": 119.3947
   },
   {
-      "kabko": "KAB. SUMBA BARAT DAYA",
+      "kabko": "Kab. SUMBA BARAT DAYA",
       "lat": -9.5391,
       "long": 119.1391
   },
   {
-      "kabko": "KAB. SUMBA TENGAH",
+      "kabko": "Kab. SUMBA TENGAH",
       "lat": -9.4879,
       "long": 119.6963
   },
   {
-      "kabko": "KAB. SUMBA TIMUR",
+      "kabko": "Kab. SUMBA TIMUR",
       "lat": -9.9802,
       "long": 120.3436
   },
   {
-      "kabko": "KAB. TIMOR TENGAH SELATAN",
+      "kabko": "Kab. TIMOR TENGAH SELATAN",
       "lat": -9.7763,
       "long": 124.4198
   },
   {
-      "kabko": "KAB. TIMOR TENGAH UTARA",
+      "kabko": "Kab. TIMOR TENGAH UTARA",
       "lat": -9.4523,
       "long": 124.5971
   },
   {
-      "kabko": "KOTA KUPANG",
+      "kabko": "Kota KUPANG",
       "lat": -10.1772,
       "long": 123.607
   },
   {
-      "kabko": "KAB. BENGKAYANG",
+      "kabko": "Kab. BENGKAYANG",
       "lat": 1.0691,
       "long": 109.6639
   },
   {
-      "kabko": "KAB. KAPUAS HULU",
+      "kabko": "Kab. KAPUAS HULU",
       "lat": 0.8337,
       "long": 113.0012
   },
   {
-      "kabko": "KAB. KAYONG UTARA",
+      "kabko": "Kab. KAYONG UTARA",
       "lat": -0.9226,
       "long": 110.045
   },
   {
-      "kabko": "KAB. KETAPANG",
+      "kabko": "Kab. KETAPANG",
       "lat": -1.5698,
       "long": 110.5215
   },
   {
-      "kabko": "KAB. KUBU RAYA",
+      "kabko": "Kab. KUBU RAYA",
       "lat": -0.3534,
       "long": 109.4735
   },
   {
-      "kabko": "KAB. LANDAK",
+      "kabko": "Kab. LANDAK",
       "lat": 0.4237,
       "long": 109.7592
   },
   {
-      "kabko": "KAB. MELAWI",
+      "kabko": "Kab. MELAWI",
       "lat": -0.7001,
       "long": 111.6661
   },
   {
-      "kabko": "KAB. MEMPAWAH",
+      "kabko": "Kab. MEMPAWAH",
       "lat": 0.3897,
       "long": 109.1404
   },
   {
-      "kabko": "KAB. SAMBAS",
+      "kabko": "Kab. SAMBAS",
       "lat": 1.3625,
       "long": 109.2832
   },
   {
-      "kabko": "KAB. SANGGAU",
+      "kabko": "Kab. SANGGAU",
       "lat": 0.14,
       "long": 110.5215
   },
   {
-      "kabko": "KAB. SEKADAU",
+      "kabko": "Kab. SEKADAU",
       "lat": -0.0697,
       "long": 110.9984
   },
   {
-      "kabko": "KAB. SINTANG",
+      "kabko": "Kab. SINTANG",
       "lat": -0.1378,
       "long": 112.8106
   },
   {
-      "kabko": "KOTA PONTIANAK",
+      "kabko": "Kota PONTIANAK",
       "lat": -0.0263,
       "long": 109.3425
   },
   {
-      "kabko": "KOTA SINGKAWANG",
+      "kabko": "Kota SINGKAWANG",
       "lat": 0.906,
       "long": 108.9872
   },
   {
-      "kabko": "KAB. BALANGAN",
+      "kabko": "Kab. BALANGAN",
       "lat": -2.326,
       "long": 115.6155
   },
   {
-      "kabko": "KAB. BANJAR",
+      "kabko": "Kab. BANJAR",
       "lat": -3.32,
       "long": 114.9991
   },
   {
-      "kabko": "KAB. BARITO KUALA",
+      "kabko": "Kab. BARITO KUALA",
       "lat": -3.0715,
       "long": 114.6668
   },
   {
-      "kabko": "KAB. HULU SUNGAI SELATAN",
+      "kabko": "Kab. HULU SUNGAI SELATAN",
       "lat": -2.7663,
       "long": 115.2363
   },
   {
-      "kabko": "KAB. HULU SUNGAI TENGAH",
+      "kabko": "Kab. HULU SUNGAI TENGAH",
       "lat": -2.6153,
       "long": 115.5207
   },
   {
-      "kabko": "KAB. HULU SUNGAI UTARA",
+      "kabko": "Kab. HULU SUNGAI UTARA",
       "lat": -2.4421,
       "long": 115.1889
   },
   {
-      "kabko": "KAB. KOTABARU",
+      "kabko": "Kab. KotaBARU",
       "lat": -3.003,
       "long": 115.9468
   },
   {
-      "kabko": "KAB. TABALONG",
+      "kabko": "Kab. TABALONG",
       "lat": -1.8643,
       "long": 115.5681
   },
   {
-      "kabko": "KAB. TANAH BUMBU",
+      "kabko": "Kab. TANAH BUMBU",
       "lat": -3.4512,
       "long": 115.5681
   },
   {
-      "kabko": "KAB. TANAH LAUT",
+      "kabko": "Kab. TANAH LAUT",
       "lat": -3.7694,
       "long": 114.8093
   },
   {
-      "kabko": "KAB. TAPIN",
+      "kabko": "Kab. TAPIN",
       "lat": -2.9161,
       "long": 115.0466
   },
   {
-      "kabko": "KOTA BANJARBARU",
+      "kabko": "Kota BANJARBARU",
       "lat": -3.4572,
       "long": 114.8103
   },
   {
-      "kabko": "KOTA BANJARMASIN",
+      "kabko": "Kota BANJARMASIN",
       "lat": -3.3186,
       "long": 114.5944
   },
   {
-      "kabko": "KAB. BARITO SELATAN",
+      "kabko": "Kab. BARITO SELATAN",
       "lat": -1.8759,
       "long": 114.8093
   },
   {
-      "kabko": "KAB. BARITO TIMUR",
+      "kabko": "Kab. BARITO TIMUR",
       "lat": -2.0124,
       "long": 115.1889
   },
   {
-      "kabko": "KAB. BARITO UTARA",
+      "kabko": "Kab. BARITO UTARA",
       "lat": -0.9587,
       "long": 115.094
   },
   {
-      "kabko": "KAB. GUNUNG MAS",
+      "kabko": "Kab. GUNUNG MAS",
       "lat": -1.2522,
       "long": 113.5729
   },
   {
-      "kabko": "KAB. KAPUAS",
+      "kabko": "Kab. KAPUAS",
       "lat": -1.8116,
       "long": 114.3341
   },
   {
-      "kabko": "KAB. KATINGAN",
+      "kabko": "Kab. KATINGAN",
       "lat": -0.9758,
       "long": 112.8106
   },
   {
-      "kabko": "KAB. KOTAWARINGIN BARAT",
+      "kabko": "Kab. KotaWARINGIN BARAT",
       "lat": -2.5063,
       "long": 111.7615
   },
   {
-      "kabko": "KAB. KOTAWARINGIN TIMUR",
+      "kabko": "Kab. KotaWARINGIN TIMUR",
       "lat": -2.1225,
       "long": 112.8106
   },
   {
-      "kabko": "KAB. LAMANDAU",
+      "kabko": "Kab. LAMANDAU",
       "lat": -1.8526,
       "long": 111.2845
   },
   {
-      "kabko": "KAB. MURUNG RAYA",
+      "kabko": "Kab. MURUNG RAYA",
       "lat": -0.1362,
       "long": 114.3341
   },
   {
-      "kabko": "KAB. PULANG PISAU",
+      "kabko": "Kab. PULANG PISAU",
       "lat": -2.685,
       "long": 113.9536
   },
   {
-      "kabko": "KAB. SUKAMARA",
+      "kabko": "Kab. SUKAMARA",
       "lat": -2.6268,
       "long": 111.2368
   },
   {
-      "kabko": "KAB. SERUYAN",
+      "kabko": "Kab. SERUYAN",
       "lat": -3.0123,
       "long": 112.4291
   },
   {
-      "kabko": "KOTA PALANGKARAYA",
+      "kabko": "Kota PALANGKARAYA",
       "lat": -2.2161,
       "long": 113.914
   },
   {
-      "kabko": "KAB. BERAU",
+      "kabko": "Kab. BERAU",
       "lat": 2.0451,
       "long": 117.3616
   },
   {
-      "kabko": "KAB. KUTAI BARAT",
+      "kabko": "Kab. KUTAI BARAT",
       "lat": -0.4052,
       "long": 115.8522
   },
   {
-      "kabko": "KAB. KUTAI KARTANEGARA",
+      "kabko": "Kab. KUTAI KARTANEGARA",
       "lat": -0.1337,
       "long": 116.6082
   },
   {
-      "kabko": "KAB. KUTAI TIMUR",
+      "kabko": "Kab. KUTAI TIMUR",
       "lat": 0.9434,
       "long": 116.9852
   },
   {
-      "kabko": "KAB. MAHAKAM ULU",
+      "kabko": "Kab. MAHAKAM ULU",
       "lat": 0.9617,
       "long": 114.7143
   },
   {
-      "kabko": "KAB. PASER",
+      "kabko": "Kab. PASER",
       "lat": -1.7175,
       "long": 115.9468
   },
   {
-      "kabko": "KAB. PENAJAM PASER UTARA",
+      "kabko": "Kab. PENAJAM PASER UTARA",
       "lat": -1.2917,
       "long": 116.5138
   },
   {
-      "kabko": "KOTA BALIKPAPAN",
+      "kabko": "Kota BALIKPAPAN",
       "lat": -1.2379,
       "long": 116.8529
   },
   {
-      "kabko": "KOTA BONTANG",
+      "kabko": "Kota BONTANG",
       "lat": 0.1209,
       "long": 117.48
   },
   {
-      "kabko": "KOTA SAMARINDA",
+      "kabko": "Kota SAMARINDA",
       "lat": -0.4948,
       "long": 117.1436
   },
   {
-      "kabko": "KAB. BULUNGAN",
+      "kabko": "Kab. BULUNGAN",
       "lat": 2.9042,
       "long": 116.9852
   },
   {
-      "kabko": "KAB. MALINAU",
+      "kabko": "Kab. MALINAU",
       "lat": 3.0731,
       "long": 116.0414
   },
   {
-      "kabko": "KAB. NUNUKAN",
+      "kabko": "Kab. NUNUKAN",
       "lat": 4.081,
       "long": 116.6082
   },
   {
-      "kabko": "KAB. TANA TIDUNG",
+      "kabko": "Kab. TANA TIDUNG",
       "lat": 3.5519,
       "long": 117.0794
   },
   {
-      "kabko": "KOTA TARAKAN",
+      "kabko": "Kota TARAKAN",
       "lat": 3.3274,
       "long": 117.5785
   },
   {
-      "kabko": "KAB. BOALEMO",
+      "kabko": "Kab. BOALEMO",
       "lat": 0.7013,
       "long": 122.2654
   },
   {
-      "kabko": "KAB. BONE BOLANGO",
+      "kabko": "Kab. BONE BOLANGO",
       "lat": 0.5658,
       "long": 123.3486
   },
   {
-      "kabko": "KAB. GORONTALO",
+      "kabko": "Kab. GORONTALO",
       "lat": 0.5693,
       "long": 122.8084
   },
   {
-      "kabko": "KAB. GORONTALO UTARA",
+      "kabko": "Kab. GORONTALO UTARA",
       "lat": 0.9253,
       "long": 122.492
   },
   {
-      "kabko": "KAB. POHUWATO",
+      "kabko": "Kab. POHUWATO",
       "lat": 0.7055,
       "long": 121.7195
   },
   {
-      "kabko": "KOTA GORONTALO",
+      "kabko": "Kota GORONTALO",
       "lat": 0.5435,
       "long": 123.0568
   },
   {
-      "kabko": "KAB. BANTAENG",
+      "kabko": "Kab. BANTAENG",
       "lat": -5.5169,
       "long": 120.0203
   },
   {
-      "kabko": "KAB. BARRU",
+      "kabko": "Kab. BARRU",
       "lat": -4.4364,
       "long": 119.6499
   },
   {
-      "kabko": "KAB. BONE",
+      "kabko": "Kab. BONE",
       "lat": -4.7443,
       "long": 120.0665
   },
   {
-      "kabko": "KAB. BULUKUMBA",
+      "kabko": "Kab. BULUKUMBA",
       "lat": -5.4329,
       "long": 120.2051
   },
   {
-      "kabko": "KAB. ENREKANG",
+      "kabko": "Kab. ENREKANG",
       "lat": -3.4591,
       "long": 119.8815
   },
   {
-      "kabko": "KAB. GOWA",
+      "kabko": "Kab. GOWA",
       "lat": -5.3103,
       "long": 119.7426
   },
   {
-      "kabko": "KAB. JENEPONTO",
+      "kabko": "Kab. JENEPONTO",
       "lat": -5.5546,
       "long": 119.6731
   },
   {
-      "kabko": "KAB. KEPULAUAN SELAYAR",
+      "kabko": "Kab. KEPULAUAN SELAYAR",
       "lat": -6.287,
       "long": 120.5049
   },
   {
-      "kabko": "KAB. LUWU",
+      "kabko": "Kab. LUWU",
       "lat": -3.3052,
       "long": 120.2513
   },
   {
-      "kabko": "KAB. LUWU TIMUR",
+      "kabko": "Kab. LUWU TIMUR",
       "lat": -2.5826,
       "long": 121.171
   },
   {
-      "kabko": "KAB. LUWU UTARA",
+      "kabko": "Kab. LUWU UTARA",
       "lat": -2.269,
       "long": 119.9741
   },
   {
-      "kabko": "KAB. MAROS",
+      "kabko": "Kab. MAROS",
       "lat": -5.0549,
       "long": 119.6963
   },
   {
-      "kabko": "KAB. PANGKAJENE DAN KEPULAUAN",
+      "kabko": "Kab. PANGKAJENE DAN KEPULAUAN",
       "lat": -4.805,
       "long": 119.5572
   },
   {
-      "kabko": "KAB. PINRANG",
+      "kabko": "Kab. PINRANG",
       "lat": -3.6483,
       "long": 119.5572
   },
   {
-      "kabko": "KAB. SIDENRENG RAPPANG",
+      "kabko": "Kab. SIDENRENG RAPPANG",
       "lat": -3.7739,
       "long": 120.0203
   },
   {
-      "kabko": "KAB. SINJAI",
+      "kabko": "Kab. SINJAI",
       "lat": -5.2172,
       "long": 120.1127
   },
   {
-      "kabko": "KAB. SOPPENG",
+      "kabko": "Kab. SOPPENG",
       "lat": -4.3519,
       "long": 119.9278
   },
   {
-      "kabko": "KAB. TAKALAR",
+      "kabko": "Kab. TAKALAR",
       "lat": -5.4162,
       "long": 119.4876
   },
   {
-      "kabko": "KAB. TANA TORAJA",
+      "kabko": "Kab. TANA TORAJA",
       "lat": -3.0753,
       "long": 119.7426
   },
   {
-      "kabko": "KAB. TORAJA UTARA",
+      "kabko": "Kab. TORAJA UTARA",
       "lat": -2.8622,
       "long": 119.8352
   },
   {
-      "kabko": "KAB. WAJO",
+      "kabko": "Kab. WAJO",
       "lat": -4.0222,
       "long": 120.0665
   },
   {
-      "kabko": "KOTA MAKASSAR",
+      "kabko": "Kota MAKASSAR",
       "lat": -5.1477,
       "long": 119.4327
   },
   {
-      "kabko": "KOTA PALOPO",
+      "kabko": "Kota PALOPO",
       "lat": -3.0016,
       "long": 120.1985
   },
   {
-      "kabko": "KOTA PAREPARE",
+      "kabko": "Kota PAREPARE",
       "lat": -4.0096,
       "long": 119.6291
   },
   {
-      "kabko": "KAB. BOMBANA",
+      "kabko": "Kab. BOMBANA",
       "lat": -4.6543,
       "long": 121.9018
   },
   {
-      "kabko": "KAB. BUTON",
+      "kabko": "Kab. BUTON",
       "lat": -5.3096,
       "long": 122.9888
   },
   {
-      "kabko": "KAB. BUTON SELATAN",
+      "kabko": "Kab. BUTON SELATAN",
       "lat": -5.3096,
       "long": 122.9888
   },
   {
-      "kabko": "KAB. BUTON TENGAH",
+      "kabko": "Kab. BUTON TENGAH",
       "lat": -5.3891,
       "long": 122.5599
   },
   {
-      "kabko": "KAB. BUTON UTARA",
+      "kabko": "Kab. BUTON UTARA",
       "lat": -4.7023,
       "long": 123.0339
   },
   {
-      "kabko": "KAB. KOLAKA",
+      "kabko": "Kab. KOLAKA",
       "lat": -3.9947,
       "long": 121.5827
   },
   {
-      "kabko": "KAB. KOLAKA TIMUR",
+      "kabko": "Kab. KOLAKA TIMUR",
       "lat": -4.2279,
       "long": 121.9018
   },
   {
-      "kabko": "KAB. KOLAKA UTARA",
+      "kabko": "Kab. KOLAKA UTARA",
       "lat": -3.1347,
       "long": 121.171
   },
   {
-      "kabko": "KAB. KONAWE",
+      "kabko": "Kab. KONAWE",
       "lat": -3.938,
       "long": 122.0837
   },
   {
-      "kabko": "KAB. KONAWE KEPULAUAN",
+      "kabko": "Kab. KONAWE KEPULAUAN",
       "lat": -4.1361,
       "long": 123.1239
   },
   {
-      "kabko": "KAB. KONAWE SELATAN",
+      "kabko": "Kab. KONAWE SELATAN",
       "lat": -4.2028,
       "long": 122.4467
   },
   {
-      "kabko": "KAB. KONAWE UTARA",
+      "kabko": "Kab. KONAWE UTARA",
       "lat": -3.3803,
       "long": 122.0837
   },
   {
-      "kabko": "KAB. MUNA",
+      "kabko": "Kab. MUNA",
       "lat": -4.9016,
       "long": 122.6277
   },
   {
-      "kabko": "KAB. MUNA BARAT",
+      "kabko": "Kab. MUNA BARAT",
       "lat": -4.9016,
       "long": 122.6277
   },
   {
-      "kabko": "KAB. WAKATOBI",
+      "kabko": "Kab. WAKATOBI",
       "lat": -5.6504,
       "long": 123.8902
   },
   {
-      "kabko": "KOTA BAU-BAU",
+      "kabko": "Kota BAU-BAU",
       "lat": -5.5071,
       "long": 122.5969
   },
   {
-      "kabko": "KOTA KENDARI",
+      "kabko": "Kota KENDARI",
       "lat": -3.9985,
       "long": 122.513
   },
   {
-      "kabko": "KAB. BANGGAI",
+      "kabko": "Kab. BANGGAI",
       "lat": -0.9562,
       "long": 122.6277
   },
   {
-      "kabko": "KAB. BANGGAI KEPULAUAN",
+      "kabko": "Kab. BANGGAI KEPULAUAN",
       "lat": -0.9562,
       "long": 122.6277
   },
   {
-      "kabko": "KAB. BANGGAI LAUT",
+      "kabko": "Kab. BANGGAI LAUT",
       "lat": -1.6735,
       "long": 123.5504
   },
   {
-      "kabko": "KAB. BUOL",
+      "kabko": "Kab. BUOL",
       "lat": 0.9695,
       "long": 121.3542
   },
   {
-      "kabko": "KAB. DONGGALA",
+      "kabko": "Kab. DONGGALA",
       "lat": -0.4233,
       "long": 119.8352
   },
   {
-      "kabko": "KAB. MOROWALI",
+      "kabko": "Kab. MOROWALI",
       "lat": -2.6987,
       "long": 121.9018
   },
   {
-      "kabko": "KAB. MOROWALI UTARA",
+      "kabko": "Kab. MOROWALI UTARA",
       "lat": -1.6312,
       "long": 121.3542
   },
   {
-      "kabko": "KAB. PARIGI MOUTONG",
+      "kabko": "Kab. PARIGI MOUTONG",
       "lat": 0.5818,
       "long": 120.8039
   },
   {
-      "kabko": "KAB. POSO",
+      "kabko": "Kab. POSO",
       "lat": -1.6469,
       "long": 120.4358
   },
   {
-      "kabko": "KAB. SIGI",
+      "kabko": "Kab. SIGI",
       "lat": -1.386,
       "long": 119.8815
   },
   {
-      "kabko": "KAB. TOJO UNA-UNA",
+      "kabko": "Kab. TOJO UNA-UNA",
       "lat": -1.0988,
       "long": 121.537
   },
   {
-      "kabko": "KAB. TOLI-TOLI",
+      "kabko": "Kab. TOLI-TOLI",
       "lat": 0.8768,
       "long": 120.758
   },
   {
-      "kabko": "KOTA PALU",
+      "kabko": "Kota PALU",
       "lat": -0.9003,
       "long": 119.878
   },
   {
-      "kabko": "KAB. BOLAANG MONGONDOW",
+      "kabko": "Kab. BOLAANG MONGONDOW",
       "lat": 0.6871,
       "long": 124.0641
   },
   {
-      "kabko": "KAB. BOLAANG MONGONDOW SELATAN",
+      "kabko": "Kab. BOLAANG MONGONDOW SELATAN",
       "lat": 0.4053,
       "long": 123.8411
   },
   {
-      "kabko": "KAB. BOLAANG MONGONDOW TIMUR",
+      "kabko": "Kab. BOLAANG MONGONDOW TIMUR",
       "lat": 0.7153,
       "long": 124.4642
   },
   {
-      "kabko": "KAB. BOLAANG MONGONDOW UTARA",
+      "kabko": "Kab. BOLAANG MONGONDOW UTARA",
       "lat": 0.907,
       "long": 123.2657
   },
   {
-      "kabko": "KAB. KEPULAUAN SANGIHE",
+      "kabko": "Kab. KEPULAUAN SANGIHE",
       "lat": 3.6329,
       "long": 125.5001
   },
   {
-      "kabko": "KAB. KEPULAUAN SIAU TAGULANDANG BIARO",
+      "kabko": "Kab. KEPULAUAN SIAU TAGULANDANG BIARO",
       "lat": 2.346,
       "long": 125.4124
   },
   {
-      "kabko": "KAB. KEPULAUAN TALAUD",
+      "kabko": "Kab. KEPULAUAN TALAUD",
       "lat": 4.3067,
       "long": 126.8035
   },
   {
-      "kabko": "KAB. MINAHASA",
+      "kabko": "Kab. MINAHASA",
       "lat": 1.2169,
       "long": 124.8183
   },
   {
-      "kabko": "KAB. MINAHASA SELATAN",
+      "kabko": "Kab. MINAHASA SELATAN",
       "lat": 1.0947,
       "long": 124.4642
   },
   {
-      "kabko": "KAB. MINAHASA TENGGARA",
+      "kabko": "Kab. MINAHASA TENGGARA",
       "lat": 1.0279,
       "long": 124.7299
   },
   {
-      "kabko": "KAB. MINAHASA UTARA",
+      "kabko": "Kab. MINAHASA UTARA",
       "lat": 1.5328,
       "long": 124.9948
   },
   {
-      "kabko": "KOTA BITUNG",
+      "kabko": "Kota BITUNG",
       "lat": 1.4404,
       "long": 125.1217
   },
   {
-      "kabko": "KOTA KOTAMOBAGU",
+      "kabko": "Kota KotaMOBAGU",
       "lat": 0.7244,
       "long": 124.3199
   },
   {
-      "kabko": "KOTA MANADO",
+      "kabko": "Kota MANADO",
       "lat": 1.4748,
       "long": 124.8421
   },
   {
-      "kabko": "KOTA TOMOHON",
+      "kabko": "Kota TOMOHON",
       "lat": 1.3229,
       "long": 124.8405
   },
   {
-      "kabko": "KAB. MAJENE",
+      "kabko": "Kab. MAJENE",
       "lat": -3.0297,
       "long": 118.9063
   },
   {
-      "kabko": "KAB. MAMASA",
+      "kabko": "Kab. MAMASA",
       "lat": -2.9118,
       "long": 119.325
   },
   {
-      "kabko": "KAB. MAMUJU",
+      "kabko": "Kab. MAMUJU",
       "lat": -2.492,
       "long": 119.325
   },
   {
-      "kabko": "KAB. MAMUJU TENGAH",
+      "kabko": "Kab. MAMUJU TENGAH",
       "lat": -1.9354,
       "long": 119.5108
   },
   {
-      "kabko": "KAB. MAMUJU UTARA",
+      "kabko": "Kab. MAMUJU UTARA",
       "lat": -1.5265,
       "long": 119.5108
   },
   {
-      "kabko": "KAB. POLEWALI MANDAR",
+      "kabko": "Kab. POLEWALI MANDAR",
       "lat": -3.3419,
       "long": 119.1391
   },
   {
-      "kabko": "KAB. BURU",
+      "kabko": "Kab. BURU",
       "lat": -3.3307,
       "long": 126.6957
   },
   {
-      "kabko": "KAB. BURU SELATAN",
+      "kabko": "Kab. BURU SELATAN",
       "lat": -3.7274,
       "long": 126.6957
   },
   {
-      "kabko": "KAB. KEPULAUAN ARU",
+      "kabko": "Kab. KEPULAUAN ARU",
       "lat": -6.1947,
       "long": 134.5502
   },
   {
-      "kabko": "KAB. MALUKU BARAT DAYA",
+      "kabko": "Kab. MALUKU BARAT DAYA",
       "lat": -7.7852,
       "long": 126.3498
   },
   {
-      "kabko": "KAB. MALUKU TENGAH",
+      "kabko": "Kab. MALUKU TENGAH",
       "lat": -3.0167,
       "long": 129.4864
   },
   {
-      "kabko": "KAB. MALUKU TENGGARA",
+      "kabko": "Kab. MALUKU TENGGARA",
       "lat": -5.7512,
       "long": 132.7272
   },
   {
-      "kabko": "KAB. MALUKU TENGGARA BARAT",
+      "kabko": "Kab. MALUKU TENGGARA BARAT",
       "lat": -7.5323,
       "long": 131.3611
   },
   {
-      "kabko": "KAB. SERAM BAGIAN BARAT",
+      "kabko": "Kab. SERAM BAGIAN BARAT",
       "lat": -3.1272,
       "long": 128.4008
   },
   {
-      "kabko": "KAB. SERAM BAGIAN TIMUR",
+      "kabko": "Kab. SERAM BAGIAN TIMUR",
       "lat": -3.4233,
       "long": 130.2271
   },
   {
-      "kabko": "KOTA AMBON",
+      "kabko": "Kota AMBON",
       "lat": -3.6554,
       "long": 128.1908
   },
   {
-      "kabko": "KOTA TUAL",
+      "kabko": "Kota TUAL",
       "lat": -5.6266,
       "long": 132.7521
   },
   {
-      "kabko": "KAB. HALMAHERA BARAT",
+      "kabko": "Kab. HALMAHERA BARAT",
       "lat": 1.359,
       "long": 127.5961
   },
   {
-      "kabko": "KAB. HALMAHERA TENGAH",
+      "kabko": "Kab. HALMAHERA TENGAH",
       "lat": 0.442,
       "long": 128.3587
   },
   {
-      "kabko": "KAB. HALMAHERA UTARA",
+      "kabko": "Kab. HALMAHERA UTARA",
       "lat": 1.5074,
       "long": 127.8937
   },
   {
-      "kabko": "KAB. HALMAHERA SELATAN",
+      "kabko": "Kab. HALMAHERA SELATAN",
       "lat": -1.5109,
       "long": 127.7238
   },
   {
-      "kabko": "KAB. KEPULAUAN SULA",
+      "kabko": "Kab. KEPULAUAN SULA",
       "lat": -1.8456,
       "long": 125.3431
   },
   {
-      "kabko": "KAB. HALMAHERA TIMUR",
+      "kabko": "Kab. HALMAHERA TIMUR",
       "lat": 1.3121,
       "long": 128.485
   },
   {
-      "kabko": "KAB. PULAU MOROTAI",
+      "kabko": "Kab. PULAU MOROTAI",
       "lat": 2.3657,
       "long": 128.4008
   },
   {
-      "kabko": "KAB. PULAU TALIABU",
+      "kabko": "Kab. PULAU TALIABU",
       "lat": -1.8268,
       "long": 124.7741
   },
   {
-      "kabko": "KOTA TERNATE",
+      "kabko": "Kota TERNATE",
       "lat": 0.771,
       "long": 127.3695
   },
   {
-      "kabko": "KOTA TIDORE KEPULAUAN",
+      "kabko": "Kota TIDORE KEPULAUAN",
       "lat": 0.674,
       "long": 127.4041
   },
   {
-      "kabko": "KAB. ASMAT",
+      "kabko": "Kab. ASMAT",
       "lat": -5.0574,
       "long": 138.3988
   },
   {
-      "kabko": "KAB. BIAK NUMFOR",
+      "kabko": "Kab. BIAK NUMFOR",
       "lat": -1.0381,
       "long": 135.9801
   },
   {
-      "kabko": "KAB. BOVEN DIGOEL",
+      "kabko": "Kab. BOVEN DIGOEL",
       "lat": -5.74,
       "long": 140.3482
   },
   {
-      "kabko": "KAB. DEIYAI",
+      "kabko": "Kab. DEIYAI",
       "lat": -4.0975,
       "long": 136.4393
   },
   {
-      "kabko": "KAB. DOGIYAI",
+      "kabko": "Kab. DOGIYAI",
       "lat": -4.0454,
       "long": 135.6763
   },
   {
-      "kabko": "KAB. INTAN JAYA",
+      "kabko": "Kab. INTAN JAYA",
       "lat": -3.5076,
       "long": 136.7478
   },
   {
-      "kabko": "KAB. JAYAPURA",
+      "kabko": "Kab. JAYAPURA",
       "lat": -2.9879,
       "long": 139.8547
   },
   {
-      "kabko": "KAB. JAYAWIJAYA",
+      "kabko": "Kab. JAYAWIJAYA",
       "lat": -4.0004,
       "long": 138.7995
   },
   {
-      "kabko": "KAB. KEEROM",
+      "kabko": "Kab. KEEROM",
       "lat": -3.345,
       "long": 140.7624
   },
   {
-      "kabko": "KAB. KEPULAUAN YAPEN",
+      "kabko": "Kab. KEPULAUAN YAPEN",
       "lat": -1.7469,
       "long": 136.1709
   },
   {
-      "kabko": "KAB. LANNY JAYA",
+      "kabko": "Kab. LANNY JAYA",
       "lat": -3.971,
       "long": 138.319
   },
   {
-      "kabko": "KAB. MAMBERAMO RAYA",
+      "kabko": "Kab. MAMBERAMO RAYA",
       "lat": -2.5331,
       "long": 137.7638
   },
   {
-      "kabko": "KAB. MAMBERAMO TENGAH",
+      "kabko": "Kab. MAMBERAMO TENGAH",
       "lat": -2.3746,
       "long": 138.319
   },
   {
-      "kabko": "KAB. MAPPI",
+      "kabko": "Kab. MAPPI",
       "lat": -6.7606,
       "long": 139.6911
   },
   {
-      "kabko": "KAB. MERAUKE",
+      "kabko": "Kab. MERAUKE",
       "lat": -7.7838,
       "long": 139.0413
   },
   {
-      "kabko": "KAB. MIMIKA",
+      "kabko": "Kab. MIMIKA",
       "lat": -4.4553,
       "long": 137.1362
   },
   {
-      "kabko": "KAB. NABIRE",
+      "kabko": "Kab. NABIRE",
       "lat": -3.5095,
       "long": 135.7521
   },
   {
-      "kabko": "KAB. NDUGA",
+      "kabko": "Kab. NDUGA",
       "lat": -4.4069,
       "long": 138.2394
   },
   {
-      "kabko": "KAB. PANIAI",
+      "kabko": "Kab. PANIAI",
       "lat": -3.7876,
       "long": 136.3625
   },
   {
-      "kabko": "KAB. PEGUNUNGAN BINTANG",
+      "kabko": "Kab. PEGUNUNGAN BINTANG",
       "lat": -4.559,
       "long": 140.5136
   },
   {
-      "kabko": "KAB. PUNCAK",
+      "kabko": "Kab. PUNCAK",
       "lat": -3.8649,
       "long": 137.6062
   },
   {
-      "kabko": "KAB. PUNCAK JAYA",
+      "kabko": "Kab. PUNCAK JAYA",
       "lat": -3.4468,
       "long": 137.8427
   },
   {
-      "kabko": "KAB. SARMI",
+      "kabko": "Kab. SARMI",
       "lat": -2.4678,
       "long": 139.2031
   },
   {
-      "kabko": "KAB. SUPIORI",
+      "kabko": "Kab. SUPIORI",
       "lat": -0.7295,
       "long": 135.6385
   },
   {
-      "kabko": "KAB. TOLIKARA",
+      "kabko": "Kab. TOLIKARA",
       "lat": -3.4811,
       "long": 138.4787
   },
   {
-      "kabko": "KAB. WAROPEN",
+      "kabko": "Kab. WAROPEN",
       "lat": -1.7469,
       "long": 136.1709
   },
   {
-      "kabko": "KAB. YAHUKIMO",
+      "kabko": "Kab. YAHUKIMO",
       "lat": -4.494,
       "long": 139.528
   },
   {
-      "kabko": "KAB. YALIMO",
+      "kabko": "Kab. YALIMO",
       "lat": -3.7853,
       "long": 139.4466
   },
   {
-      "kabko": "KOTA JAYAPURA",
+      "kabko": "Kota JAYAPURA",
       "lat": -2.5916,
       "long": 140.669
   },
   {
-      "kabko": "KAB. YAPEN WAROPEN",
+      "kabko": "Kab. YAPEN WAROPEN",
       "lat": -1.7469,
       "long": 136.1709
   },
   {
-      "kabko": "KAB. FAKFAK",
+      "kabko": "Kab. FAKFAK",
       "lat": -3.0977,
       "long": 133.0195
   },
   {
-      "kabko": "KAB. KAIMANA",
+      "kabko": "Kab. KAIMANA",
       "lat": -3.2884,
       "long": 133.9437
   },
   {
-      "kabko": "KAB. MANOKWARI",
+      "kabko": "Kab. MANOKWARI",
       "lat": -0.999,
       "long": 133.0195
   },
   {
-      "kabko": "KAB. MANOKWARI SELATAN",
+      "kabko": "Kab. MANOKWARI SELATAN",
       "lat": -0.999,
       "long": 133.0195
   },
   {
-      "kabko": "KAB. MAYBRAT",
+      "kabko": "Kab. MAYBRAT",
       "lat": -1.2971,
       "long": 132.3151
   },
   {
-      "kabko": "KAB. PEGUNUNGAN ARFAK",
+      "kabko": "Kab. PEGUNUNGAN ARFAK",
       "lat": -1.1555,
       "long": 133.7142
   },
   {
-      "kabko": "KAB. RAJA AMPAT",
+      "kabko": "Kab. RAJA AMPAT",
       "lat": -1.0915,
       "long": 130.8779
   },
   {
-      "kabko": "KAB. SORONG",
+      "kabko": "Kab. SORONG",
       "lat": -1.1223,
       "long": 131.4883
   },
   {
-      "kabko": "KAB. SORONG SELATAN",
+      "kabko": "Kab. SORONG SELATAN",
       "lat": -1.7658,
       "long": 132.1573
   },
   {
-      "kabko": "KAB. TAMBRAUW",
+      "kabko": "Kab. TAMBRAUW",
       "lat": -0.7819,
       "long": 132.3938
   },
   {
-      "kabko": "KAB. TELUK BINTUNI",
+      "kabko": "Kab. TELUK BINTUNI",
       "lat": -1.9057,
       "long": 133.3295
   },
   {
-      "kabko": "KAB. TELUK WONDAMA",
+      "kabko": "Kab. TELUK WONDAMA",
       "lat": -2.8552,
       "long": 134.3237
   },
   {
-      "kabko": "KOTA SORONG",
+      "kabko": "Kota SORONG",
       "lat": -0.8762,
       "long": 131.2558
   }
 ]
 
-function MyCombobox() {
-  const [selected, setSelected] = useState(people[0])
+function toUpLowerCase(str){
+  var a = str.split(" ")
+  var b = ""
+  a.forEach(e => {
+    b+=e.substr(0,1).toUpperCase() + e.substr(1).toLowerCase() +" "
+  });
+  return b
+}
+
+function MyCombobox(props) {
+  const [selected, setSelected] = useState("")
   const [query, setQuery] = useState('')
 
   const filteredPeople =
     query === ''
-      ? people
-      : people.filter((person) =>
-          person.name
-            .toLowerCase()
-            .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, ''))
+      ? []
+      : kabkota.filter((a) => a.kabko.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''))
         )
 
 
@@ -2621,8 +2626,12 @@ function MyCombobox() {
           <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <Combobox.Input
               className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
-              displayValue={(person) => person.name}
-              onChange={(event) => setQuery(event.target.value)}
+              displayValue={(kabkota) => kabkota.kabko}
+              placeholder={"Cari kota..."}
+              onChange={(event) => {
+                setQuery(event.target.value)
+              }
+            }
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <SelectorIcon
@@ -2636,7 +2645,12 @@ function MyCombobox() {
             leave="transition ease-in duration-100"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            afterLeave={() => setQuery('')}
+            afterLeave={
+              () => {setQuery('')
+                props.cbKota(selected)
+                console.log("hahahaha")
+              }
+            }
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {filteredPeople.length === 0 && query !== '' ? (
@@ -2644,15 +2658,15 @@ function MyCombobox() {
                   Nothing found.
                 </div>
               ) : (
-                filteredPeople.map((person) => (
+                filteredPeople.map((a) => (
                   <Combobox.Option
-                    key={person.id}
+                    key={a.lat}
                     className={({ active }) =>
-                      `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                      `relative cursor-default select-none py-2 text-left px-4 pr-4 ${
                         active ? 'bg-teal-600 text-white' : 'text-gray-900'
                       }`
                     }
-                    value={person}
+                    value={a}
                   >
                     {({ selected, active }) => (
                       <>
@@ -2661,7 +2675,7 @@ function MyCombobox() {
                             selected ? 'font-medium' : 'font-normal'
                           }`}
                         >
-                          {person.name}
+                          {toUpLowerCase(a.kabko)}
                         </span>
                         {selected ? (
                           <span
@@ -2685,10 +2699,9 @@ function MyCombobox() {
   )
 }
 
-export default function Example() {
-  // const [focused, setFocused] = React.useState(false)
-  // const onFocus = () => setFocused(true)
-  // const onBlur = () => setFocused(false)
+export default function Nav(props) {
+
+  const [saatIni, setSaatIni] = useState("Hari ini")
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -2724,13 +2737,18 @@ export default function Example() {
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
+                        onClick={() => {
+                          setSaatIni(item.name)
+                          props.cb(item.name)
+    
+                        }}
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          saatIni==item.name ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
-                        aria-current={item.current ? 'page' : undefined}
+                        
                       >
                         {item.name}
                       </a>
@@ -2751,7 +2769,7 @@ export default function Example() {
                   />
                 </div> */}
                 {/* <div className="searchResult bg-white p-3"> */}
-                <MyCombobox />
+                <MyCombobox cbKota={props.cbKota}/>
                 {/* </div> */}
               </div>
               

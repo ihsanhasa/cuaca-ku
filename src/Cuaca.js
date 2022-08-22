@@ -1,6 +1,17 @@
 import React from 'react';
 /* This example requires Tailwind CSS v2.0+ */
 import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import {
+    BriefcaseIcon,
+    CalendarIcon,
+    CheckIcon,
+    ChevronDownIcon,
+    CurrencyDollarIcon,
+    LinkIcon,
+    LocationMarkerIcon,
+    PencilIcon,
+} from '@heroicons/react/solid'
+import Droplet from './droplet.svg'
 
 const features = [
     {
@@ -33,7 +44,6 @@ export default class Cuaca extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log(`props : ${JSON.stringify(props)}`)
         this.lat = props.lat;
         this.long = props.long;
 
@@ -46,9 +56,16 @@ export default class Cuaca extends React.Component {
         this.renderMyData();
     }
 
+    componentDidUpdate(prevProps) {
+        if(this.props.lat !== prevProps.lat) 
+        {
+          this.renderMyData();
+        }
+      } 
+
     renderMyData() {
         // fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${this.lat},${this.long}?unitGroup=us&key=TBVHYL2WLMLB5TVG599PVCWKV`)
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.lat}&lon=${this.long}&appid=97acda72b4cec0dec58e74fc0cbbbba3&units=metric&lang=id`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.props.lat}&lon=${this.props.long}&appid=97acda72b4cec0dec58e74fc0cbbbba3&units=metric&lang=id`)
             .then((response) => response.json())
             .then((responseJson) => {
                 console.log(responseJson)
@@ -62,18 +79,29 @@ export default class Cuaca extends React.Component {
     render() {
         return (
             <div className="py-12 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="lg:text-center">
-                        <h2 className="text-lg text-indigo-600 font-semibold">{this.state.data ? this.state.data.name : ""}</h2>
-                        <p className="mt-2 text-5xl leading-8 font-bold tracking-tight text-gray-900 sm:text-5xl sm:tracking-tight">
-                            {this.state.data ? this.state.data.main.temp + "°" : ""}
-                        </p>
-                        <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                                {this.state.data ? this.state.data.weather[0].description : ""}
-                        </p>
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="bg-indigo-100 shadow overflow-hidden sm:rounded-lg">
+                        <div className="px-4 py-5 sm:px-6">
+                            <div className="lg:text-center">
+                                <h2 className="text-lg text-indigo-600 font-semibold">{this.state.data ? this.state.data.name : ""}</h2>
+                                <p className="mt-2 text-5xl leading-8 font-bold tracking-tight text-gray-900 sm:text-6xl sm:tracking-tight">
+                                    {this.state.data ? parseInt(this.state.data.main.temp, 0) + "°C" : ""}
+                                </p>
+                                <img className="m-auto" src={`http://openweathermap.org/img/wn/${this.state.data ? this.state.data.weather[0].icon : ""}@2x.png`} />
+                                <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                                    {this.state.data ? this.state.data.weather[0].description : ""}
+                                </p>
+                                <p className="mt-2 items-center text-sm text-gray-500">
+                                    Kelembaban : {this.state.data ? this.state.data.main.humidity : ""}%</p>
+
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="mt-10">
+
+
+
+                    {/* <div className="mt-10">
                         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
                             {features.map((feature) => (
                                 <div key={feature.name} className="relative">
@@ -87,7 +115,9 @@ export default class Cuaca extends React.Component {
                                 </div>
                             ))}
                         </dl>
-                    </div>
+                    </div> */}
+
+
                 </div>
             </div>
             // <div>
