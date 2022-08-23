@@ -1,11 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { React, Fragment, useState } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import logo from './logo.png'
-import TombolMenu from './TombolMenu'
 import { Combobox } from '@headlessui/react'
-import { CheckIcon, SelectorIcon } from '@heroicons/react/solid'
+import { SelectorIcon } from '@heroicons/react/solid'
 
 const navigation = [
   { name: 'Hari ini' },
@@ -2614,7 +2613,7 @@ function MyCombobox(props) {
 
   const filteredPeople =
     query === ''
-      ? []
+      ? kabkota
       : kabkota.filter((a) => a.kabko.toLowerCase().replace(/\s+/g, '').includes(query.toLowerCase().replace(/\s+/g, ''))
         )
 
@@ -2648,7 +2647,6 @@ function MyCombobox(props) {
             afterLeave={
               () => {setQuery('')
                 props.cbKota(selected)
-                console.log("hahahaha")
               }
             }
           >
@@ -2683,7 +2681,7 @@ function MyCombobox(props) {
                               active ? 'text-white' : 'text-teal-600'
                             }`}
                           >
-                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
+        
                           </span>
                         ) : null}
                       </>
@@ -2759,23 +2757,8 @@ export default function Nav(props) {
 
 
               <div>
-                {/* <div className="mt-1 relative rounded-md shadow-sm">
-                  <input
-                    type="text"
-                    name="price"
-                    id="price"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-                    placeholder="Cari kota..."
-                  />
-                </div> */}
-                {/* <div className="searchResult bg-white p-3"> */}
                 <MyCombobox cbKota={props.cbKota}/>
-                {/* </div> */}
               </div>
-              
-              {/* <TombolMenu /> */}
-
-
             </div>
           </div>
 

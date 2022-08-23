@@ -40,9 +40,3 @@
     transform: rotate(360deg);
   }
 }
-
-.searchResult{
-  position: absolute;
-  width: 200px;
-  /* background-color: white; */
-}
