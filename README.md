@@ -1,7 +1,7 @@
 # Cuacaku
 
 
-Aplikasi cuaca sederhana
+## Aplikasi cuaca sederhana
 
 _author : Ihsan Hasanudin_
 
